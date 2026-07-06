@@ -19,3 +19,40 @@ function copyIban(){
 }
 updateCountdown();
 setInterval(updateCountdown,1000); 
+
+<script>
+  const peopleData = {
+    groom: {
+      name: "Απόστολος",
+      image: "images/groom.jpg"
+    },
+    bride: {
+      name: "Ειρήνη",
+      image: "images/bride.jpg"
+    },
+    koumparos1: {
+      name: "Όνομα Κουμπάρου",
+      image: "images/koumparos.jpg"
+    },
+    koumpara1: {
+      name: "Όνομα Κουμπάρας",
+      image: "images/koumpara.jpg"
+    }
+  };
+
+  function openPersonModal(person) {
+    document.getElementById("personImage").src = peopleData[person].image;
+    document.getElementById("personName").textContent = peopleData[person].name;
+    document.getElementById("personModal").classList.add("active");
+  }
+
+  function closePersonModal() {
+    document.getElementById("personModal").classList.remove("active");
+  }
+
+  document.getElementById("personModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+      closePersonModal();
+    }
+  });
+</script>
