@@ -29,11 +29,21 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;margin:0}h1{font
 }
 
 .story-photos-section .section-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(36px, 5vw, 58px);
-  font-style: italic;
-  font-weight: 500;
-  margin-bottom: 35px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 5vw, 62px);
+    font-weight: 400;
+    font-style: italic;
+    color: #2d2d2d;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+.story-photos-section .section-title::after {
+    content: "♡";
+    display: block;
+    color: #caa06a;
+    font-size: 18px;
+    margin-top: 8px;
 }
 
 .story-image-card {
@@ -54,11 +64,22 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;margin:0}h1{font
 }
 
 .couple-script-title {
-  font-family: "Great Vibes", "Cormorant Garamond", cursive;
-  font-size: clamp(42px, 7vw, 72px);
-  font-weight: 400;
-  color: #2b2b2b;
-  margin: 5px 0 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 6vw, 68px);
+    font-style: italic;
+    font-weight: 400;
+    color: #2d2d2d;
+    text-align: center;
+    margin: 10px 0 28px;
+    position: relative;
+}
+
+.couple-script-title::after {
+    content: "♡";
+    display: block;
+    color: #caa06a;
+    font-size: 18px;
+    margin-top: 8px;
 }
 
 .couple-card {
