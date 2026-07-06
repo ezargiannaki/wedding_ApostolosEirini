@@ -231,3 +231,32 @@ input,select,textarea{width:100%;padding:14px 15px;border:1px solid rgba(0,0,0,.
     grid-template-columns: 1fr;
   }
 }
+
+.people-grid div{
+  cursor:pointer;
+}
+
+.photo-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.72);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+}
+
+.photo-modal.show{
+  display:flex;
+}
+
+.photo-modal img{
+  max-width:min(420px, 88vw);
+  max-height:78vh;
+  object-fit:cover;
+  border-radius:22px;
+  background:#fff;
+  padding:10px;
+  box-shadow:0 20px 55px rgba(0,0,0,.35);
+}
