@@ -62,7 +62,6 @@
     </section>
     
     <section class="paper welcome">
-      <p class="script">Με πολλή χαρά</p>
       <h2>Σας περιμένουμε εκεί!</h2>
       <p>Οι σχέσεις είναι σαν τα λουλούδια, όσο τα φροντίζεις και τα αγαπάς, μένουν ζωντανά.
         Με μεγάλη μας χαρά θα θέλαμε να παρευρεθείτε εκείνη την μέρα.</p>
@@ -87,7 +86,8 @@
         <a class="pill grey" href="https://maps.google.com" target="_blank" rel="noopener">Πλοήγηση | Δεξίωση</a>
       </article>
     </section>
-
+    
+<!--Απλο template για κουμπάρους
     <section class="paper people" id="people">
       <p class="script">Our People</p>
       <h2>Οι άνθρωποί μας</h2>
@@ -97,15 +97,46 @@
         <div><strong>Κουμπάρα</strong><span>Κατερίνα Καλακώνα</span></div>
         <div><strong>Κουμπάρος</strong><span>Χρήστος Ρέλλιας</span></div>
       </div>
-    </section>
-
+    </section> -->
+    <div class="people-grid">
+    
+      <button class="person-card" onclick="openPersonModal('groom')">
+        <span>Ο Γαμπρός</span>
+        <strong>Απόστολος</strong>
+      </button>
+    
+      <button class="person-card" onclick="openPersonModal('bride')">
+        <span>Η Νύφη</span>
+        <strong>Ειρήνη</strong>
+      </button>
+    
+      <button class="person-card" onclick="openPersonModal('koumparos1')">
+        <span>Κουμπάρος</span>
+        <strong>Χρήστος Ρέλλιας</strong>
+      </button>
+    
+      <button class="person-card" onclick="openPersonModal('koumpara1')">
+        <span>Κουμπάρα</span>
+        <strong>Κατερίνα Καλακώνα</strong>
+      </button>
+    
+    </div>
+    
+    <div id="personModal" class="person-modal">
+      <div class="person-modal-content">
+        <button class="person-close" onclick="closePersonModal()">×</button>
+        <img id="personImage" src="" alt="">
+        <h3 id="personName"></h3>
+      </div>
+    </div>
+    
     <section class="paper people" id="people">
       <h2>Οι Οικογένειες</h2>
       <div class="people-grid">
-        <div><strong>Πατέρας γαμπρού</strong><span>Παναγιώτη Κιοβρέκη </span></div>
-        <div><strong>Μητέρα γαμπρού</strong><span>Μαρίας Μαχαίρα</span></div>
-        <div><strong>Πατέρας νύφης</strong><span>Κωνσταντίνου Ζαργιαννάκη</span></div>
-        <div><strong>Μητέρα νύφης</strong><span>Δέσποινας Καυκιά</span></div>
+        <div><strong>Πατέρας γαμπρού</strong><span>Παναγιώτης Κιοβρέκης</span></div>
+        <div><strong>Μητέρα γαμπρού</strong><span>Μαρία Μαχαίρα</span></div>
+        <div><strong>Πατέρας νύφης</strong><span>Κωνσταντίνος Ζαργιαννάκης</span></div>
+        <div><strong>Μητέρα νύφης</strong><span>Δέσποινα Καυκιά</span></div>
       </div>
     </section>
 
@@ -116,7 +147,7 @@
       <div class="iban-box">
         <p>Τράπεζα: Πειραιώς</p>
         <p id="iban">GR00 0000 0000 0000 0000 0000 000</p>
-        <p>Δικαιούχοι: Απόστολος ... – Ειρήνη ...</p>
+        <p>Δικαιούχος: Ειρήνη Ζαργιαννάκη</p>
         <button onclick="copyIban()">Αντιγραφή IBAN</button>
 
         <p>IRIS Ειρήνης</p>
