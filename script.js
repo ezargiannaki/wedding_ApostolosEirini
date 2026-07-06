@@ -18,4 +18,4 @@ function copyIban(){
   alert('Το IBAN αντιγράφηκε!');
 }
 updateCountdown();
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown,1000); 
