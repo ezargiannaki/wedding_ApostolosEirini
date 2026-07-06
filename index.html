@@ -87,7 +87,7 @@
       </article>
     </section>
     
-<!--Απλο template για κουμπάρους
+<!--Απλο template για κουμπάρους --><!--
     <section class="paper people" id="people">
       <p class="script">Our People</p>
       <h2>Οι άνθρωποί μας</h2>
@@ -97,38 +97,40 @@
         <div><strong>Κουμπάρα</strong><span>Κατερίνα Καλακώνα</span></div>
         <div><strong>Κουμπάρος</strong><span>Χρήστος Ρέλλιας</span></div>
       </div>
-    </section> -->
+    </section>
+   --> 
+    <!-- Περιεργο template για κουμπάρους -->
+    <section class="paper people" id="people">
+    <p class="script">Our People</p>
+    <h2>Οι άνθρωποί μας</h2>
+  
     <div class="people-grid">
-    
-      <button class="person-card" onclick="openPersonModal('groom')">
-        <span>Ο Γαμπρός</span>
-        <strong>Απόστολος</strong>
-      </button>
-    
-      <button class="person-card" onclick="openPersonModal('bride')">
-        <span>Η Νύφη</span>
-        <strong>Ειρήνη</strong>
-      </button>
-    
-      <button class="person-card" onclick="openPersonModal('koumparos1')">
-        <span>Κουμπάρος</span>
-        <strong>Χρήστος Ρέλλιας</strong>
-      </button>
-    
-      <button class="person-card" onclick="openPersonModal('koumpara1')">
-        <span>Κουμπάρα</span>
-        <strong>Κατερίνα Καλακώνα</strong>
-      </button>
-    
-    </div>
-    
-    <div id="personModal" class="person-modal">
-      <div class="person-modal-content">
-        <button class="person-close" onclick="closePersonModal()">×</button>
-        <img id="personImage" src="" alt="">
-        <h3 id="personName"></h3>
+      <div onclick="openPersonPhoto('groom')">
+        <strong>Γαμπρός</strong>
+        <span>Απόστολος</span>
+      </div>
+  
+      <div onclick="openPersonPhoto('bride')">
+        <strong>Νύφη</strong>
+        <span>Ειρήνη</span>
+      </div>
+  
+      <div onclick="openPersonPhoto('koumpara')">
+        <strong>Κουμπάρα</strong>
+        <span>Κατερίνα Καλακώνα</span>
+      </div>
+  
+      <div onclick="openPersonPhoto('koumparos')">
+        <strong>Κουμπάρος</strong>
+        <span>Χρήστος Ρέλλιας</span>
       </div>
     </div>
+  
+    <div id="photoModal" class="photo-modal" onclick="closePersonPhoto(event)">
+      <img id="personPhoto" src="" alt="">
+    </div>
+      </section> 
+  
     
     <section class="paper people" id="people">
       <h2>Οι Οικογένειες</h2>
