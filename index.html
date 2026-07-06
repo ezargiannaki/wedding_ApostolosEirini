@@ -1,0 +1,122 @@
+πΠ<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Απόστολος & Ειρήνη | Wedding Invitation</title>
+  <meta name="description" content="Ηλεκτρονική πρόσκληση γάμου" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="nav">
+      <a href="#date">Ημερομηνία</a>
+      <a href="#places">Τοποθεσίες</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#gift">Λίστα Γάμου</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Wedding Invitation</p>
+      <h1>Απόστολος <span>&</span> Ειρήνη</h1>
+      <p class="date-line">7 Μαΐου 2027</p>
+      <a href="#rsvp" class="btn">Απάντηση RSVP</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro" id="date">
+      <p class="eyebrow">Save the date</p>
+      <h2>Σας περιμένουμε εκεί!</h2>
+      <p>
+        Οι σχέσεις είναι σαν τα λουλούδια, όσο τα φροντίζεις και τα αγαπάς, μένουν ζωντανά.
+        Με μεγάλη μας χαρά θα θέλαμε να παρευρεθείτε εκείνη την μέρα.
+      </p>
+
+      <div class="countdown" data-date="2027-05-07T18:00:00">
+        <div><strong id="days">0</strong><span>Ημέρες</span></div>
+        <div><strong id="hours">0</strong><span>Ώρες</span></div>
+        <div><strong id="minutes">0</strong><span>Λεπτά</span></div>
+        <div><strong id="seconds">0</strong><span>Δευτ.</span></div>
+      </div>
+    </section>
+
+    <section class="section cards" id="places">
+      <article class="card">
+        <p class="eyebrow">Το μυστήριο</p>
+        <h3>Ι.Ν. Αγίων Τιμοθέου και Μαύρας</h3>
+        <p>Ώρα: 18:00</p>
+        <a class="link" href="https://maps.google.com" target="_blank" rel="noopener">Πλοήγηση</a>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">Η δεξίωση</p>
+        <h3>Κτήμα / Χώρος δεξίωσης</h3>
+        <p>Ώρα: 20:00</p>
+        <a class="link" href="https://maps.google.com" target="_blank" rel="noopener">Πλοήγηση</a>
+      </article>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <p class="eyebrow">Moments</p>
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=900&auto=format&fit=crop" alt="Wedding detail">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop" alt="Wedding couple">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=900&auto=format&fit=crop" alt="Wedding flowers">
+      </div>
+    </section>
+
+    <section class="section gift" id="gift">
+      <p class="eyebrow">Προαιρετική λίστα γάμου</p>
+      <h2>Η παρουσία σας είναι το μεγαλύτερο δώρο</h2>
+      <div class="iban-box">
+        <p>Τράπεζα: Πειραιώς</p>
+        <p id="iban">GR00 0000 0000 0000 0000 0000 000</p>
+        <p>Δικαιούχοι: Απόστολος ... – Ειρήνη ...</p>
+        <button onclick="copyIban()">Αντιγραφή IBAN</button>
+      </div>
+    </section>
+
+    <section class="section people">
+      <p class="eyebrow">The crew</p>
+      <h2>Οι άνθρωποί μας</h2>
+      <div class="people-grid">
+        <div><strong>Νύφη</strong><span>Ειρήνη</span></div>
+        <div><strong>Γαμπρός</strong><span>Απόστολος</span></div>
+        <div><strong>Κουμπάρα</strong><span>Κατερίνα Καλακώνα</span></div>
+        <div><strong>Κουμπάρος</strong><span>Χρήστος Ρέλλιας</span></div>
+      </div>
+    </section>
+
+    <section class="section rsvp" id="rsvp">
+      <p class="eyebrow">RSVP</p>
+      <h2>Θα είστε μαζί μας;</h2>
+      <p>Παρακαλούμε απαντήστε έως 10 Απριλίου 2027.</p>
+
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input name="name" type="text" placeholder="Ονοματεπώνυμο" required>
+        <input name="phone" type="tel" placeholder="Κινητό">
+        <select name="attendance" required>
+          <option value="">Θα παρευρεθείτε;</option>
+          <option>Ναι</option>
+          <option>Όχι</option>
+        </select>
+        <input name="guests" type="number" min="1" max="6" placeholder="Αριθμός ατόμων">
+        <textarea name="message" placeholder="Μήνυμα / αλλεργίες / σημείωση"></textarea>
+        <button type="submit">Αποστολή</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Απόστολος & Ειρήνη · 7.5.2027</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
