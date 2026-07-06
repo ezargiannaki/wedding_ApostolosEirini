@@ -20,39 +20,27 @@ function copyIban(){
 updateCountdown();
 setInterval(updateCountdown,1000); 
 
-<script>
-  const peopleData = {
-    groom: {
-      name: "Απόστολος",
-      image: "images/groom.jpg"
-    },
-    bride: {
-      name: "Ειρήνη",
-      image: "images/bride.jpg"
-    },
-    koumparos1: {
-      name: "Όνομα Κουμπάρου",
-      image: "images/koumparos.jpg"
-    },
-    koumpara1: {
-      name: "Όνομα Κουμπάρας",
-      image: "images/koumpara.jpg"
+const personPhotos = {
+    groom: "images/groom.jpg",
+    bride: "images/bride.jpg",
+    koumpara: "images/koumpara.jpg",
+    koumparos: "images/koumparos.jpg"
+};
+
+function openPersonPhoto(person) {
+
+    document.getElementById("personPhoto").src = personPhotos[person];
+
+    document.getElementById("photoModal").classList.add("show");
+
+}
+
+function closePersonPhoto(event) {
+
+    if (event.target.id === "photoModal") {
+
+        document.getElementById("photoModal").classList.remove("show");
+
     }
-  };
 
-  function openPersonModal(person) {
-    document.getElementById("personImage").src = peopleData[person].image;
-    document.getElementById("personName").textContent = peopleData[person].name;
-    document.getElementById("personModal").classList.add("active");
-  }
-
-  function closePersonModal() {
-    document.getElementById("personModal").classList.remove("active");
-  }
-
-  document.getElementById("personModal").addEventListener("click", function(e) {
-    if (e.target === this) {
-      closePersonModal();
-    }
-  });
-</script>
+}
