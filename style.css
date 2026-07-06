@@ -260,3 +260,69 @@ input,select,textarea{width:100%;padding:14px 15px;border:1px solid rgba(0,0,0,.
   padding:10px;
   box-shadow:0 20px 55px rgba(0,0,0,.35);
 }
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 820px) {
+  .nav {
+    width: 92vw;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 12px;
+    padding: 10px 14px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 110px 18px 45px;
+  }
+
+  .paper {
+    width: 92vw;
+    padding: 34px 20px;
+    margin-bottom: 38px;
+  }
+
+  .places {
+    grid-template-columns: 1fr;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .countdown {
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 6px;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown strong {
+    font-size: 24px;
+  }
+
+  .countdown em {
+    font-size: 18px;
+  }
+}
