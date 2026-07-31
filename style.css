@@ -537,3 +537,27 @@ footer{
     font-size:16px;
   }
 }
+
+/* Fade-in κατά το scroll */
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:
+    opacity .9s ease,
+    transform .9s ease;
+  will-change:opacity, transform;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Χρήστες που έχουν απενεργοποιήσει τα animations */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+}
