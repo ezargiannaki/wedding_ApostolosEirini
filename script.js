@@ -12,13 +12,46 @@ function updateCountdown(){
   document.getElementById('minutes').textContent = m;
   document.getElementById('seconds').textContent = s;
 }
+
+// Αντιγραφή IBAN
 function copyIban(){
   const iban = document.getElementById('iban').textContent;
-  navigator.clipboard.writeText(iban);
-  alert('Το IBAN αντιγράφηκε!');
+
+  navigator.clipboard.writeText(iban)
+    .then(() => {
+      alert('Το IBAN αντιγράφηκε!');
+    })
+    .catch(() => {
+      alert('Η αντιγραφή απέτυχε.');
+    });
 }
+// Αντιγραφή Iris
+function copyIris(){
+  const iris = document.getElementById('iris').textContent;
+
+  navigator.clipboard.writeText(iris)
+    .then(() => {
+      alert('Το IRIS της Ειρήνης αντιγράφηκε!');
+    })
+    .catch(() => {
+      alert('Η αντιγραφή απέτυχε.');
+    });
+}
+// Αντιγραφή Iris
+function copyIris2(){
+  const iris2 = document.getElementById('iris2').textContent;
+
+  navigator.clipboard.writeText(iris2)
+    .then(() => {
+      alert('Το IRIS του Αποστόλη αντιγράφηκε!');
+    })
+    .catch(() => {
+      alert('Η αντιγραφή απέτυχε.');
+    });
+}
+
 updateCountdown();
-setInterval(updateCountdown,1000); 
+setInterval(updateCountdown, 1000); 
 
 const personPhotos = {
     groom: "images/groom.jpg",
