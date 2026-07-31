@@ -61,19 +61,49 @@ const personPhotos = {
 };
 
 function openPersonPhoto(person) {
-
     document.getElementById("personPhoto").src = personPhotos[person];
-
     document.getElementById("photoModal").classList.add("show");
-
 }
 
 function closePersonPhoto(event) {
-
     if (event.target.id === "photoModal") {
-
         document.getElementById("photoModal").classList.remove("show");
-
     }
+}
 
+// ===========================
+// Fade-in κατά το scroll
+// ===========================
+
+const revealElements = document.querySelectorAll(
+  'main > section, .story-image-card, .people-grid > div'
+);
+
+revealElements.forEach((element) => {
+  element.classList.add('reveal');
+});
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    }
+  );
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+} else {
+  revealElements.forEach((element) => {
+    element.classList.add('visible');
+  });
 }
