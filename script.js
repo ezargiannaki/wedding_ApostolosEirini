@@ -111,3 +111,43 @@ if ('IntersectionObserver' in window) {
   });
 
 }
+
+// ===========================
+// RSVP -> Google Sheets
+// ===========================
+
+const rsvpForm = document.getElementById('rsvpForm');
+
+if (rsvpForm) {
+  rsvpForm.addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const message = document.getElementById('rsvpMessage');
+    const submitButton = rsvpForm.querySelector('button[type="submit"]');
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Αποστολή...';
+
+    const formData = new FormData(rsvpForm);
+
+    try {
+      await fetch(
+        'https://script.google.com/macros/s/AKfycbxjTQYA-0EFlU8FrY9F7XqI3SdH_DKhyEq97MhE2DBB8L3ctrh28pgrUDF44ZYmHSkg/exec',
+        {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors'
+        }
+      );
+
+      message.textContent = 'Η απάντησή σας καταχωρήθηκε. Ευχαριστούμε! 🤍';
+      rsvpForm.reset();
+
+    } catch (error) {
+      message.textContent = 'Κάτι πήγε στραβά. Παρακαλούμε δοκιμάστε ξανά.';
+    }
+
+    submitButton.disabled = false;
+    submitButton.textContent = 'Αποστολή';
+  });
+}
