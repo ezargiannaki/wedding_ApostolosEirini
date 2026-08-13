@@ -166,7 +166,7 @@ if (rsvpForm) {
     const submitButton = rsvpForm.querySelector('button[type="submit"]');
 
     submitButton.disabled = true;
-    submitButton.textContent = 'Αποστολή...';
+    submitButton.textContent = 'Ευχαριστούμε!';
 
     setTimeout(() => {
       rsvpForm.reset();
