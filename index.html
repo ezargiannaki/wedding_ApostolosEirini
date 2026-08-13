@@ -193,7 +193,11 @@
       <h2>Θα είστε μαζί μας;</h2>
       <p>Παρακαλούμε απαντήστε έως 10 Απριλίου 2027. Για τη διευκόλυνσή μας, αρκεί μία απάντηση ανά οικογένεια ή παρέα.</p>
       <!--<form action="https://formspree.io/f/mlgyvljk" method="POST"> -->
-      <form id="rsvpForm"> 
+      <!--<form id="rsvpForm">  -->
+      <form
+        action="ΤΟ_WEB_APP_URL_ΠΟΥ_ΤΕΛΕΙΩΝΕΙ_ΣΕ_/exec"
+        method="POST"
+        target="hidden_iframe">
         <input name="name" type="text" placeholder="Ονοματεπώνυμο" required>
         <input name="phone" type="tel" placeholder="Κινητό">
         <select name="attendance" required>
@@ -205,6 +209,10 @@
         <textarea name="message" placeholder="Μήνυμα / σημείωση"></textarea>
         <button type="submit">Αποστολή</button>
       </form>
+      <iframe
+        name="hidden_iframe"
+        style="display:none;">
+      </iframe>
       <p id="rsvpMessage"></p>
     </section>
   </main>
