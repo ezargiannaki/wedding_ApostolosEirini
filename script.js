@@ -112,6 +112,7 @@ if ('IntersectionObserver' in window) {
 
 }
 
+/*
 // ===========================
 // RSVP -> Google Sheets
 // ===========================
@@ -151,3 +152,4 @@ if (rsvpForm) {
     submitButton.textContent = 'Αποστολή';
   });
 }
+*/
