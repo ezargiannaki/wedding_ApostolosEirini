@@ -153,3 +153,30 @@ if (rsvpForm) {
   });
 }
 */
+// ===========================
+// RSVP - μήνυμα επιτυχίας
+// ===========================
+
+const rsvpForm = document.querySelector('#rsvp form');
+const rsvpMessage = document.getElementById('rsvpMessage');
+
+if (rsvpForm) {
+  rsvpForm.addEventListener('submit', function () {
+
+    const submitButton = rsvpForm.querySelector('button[type="submit"]');
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Αποστολή...';
+
+    setTimeout(() => {
+      rsvpForm.reset();
+
+      rsvpMessage.textContent =
+        'Η απάντησή σας καταχωρήθηκε. Ευχαριστούμε! 🤍';
+
+      submitButton.disabled = false;
+      submitButton.textContent = 'Αποστολή';
+
+    }, 1200);
+  });
+}
