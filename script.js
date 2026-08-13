@@ -132,7 +132,7 @@ if (rsvpForm) {
 
     try {
       await fetch(
-        'https://script.google.com/macros/s/AKfycbxjTQYA-0EFlU8FrY9F7XqI3SdH_DKhyEq97MhE2DBB8L3ctrh28pgrUDF44ZYmHSkg/exec',
+        'https://script.google.com/macros/s/AKfycby035jSJlRn0ZsZGbFlPK8gWOGbeS5P4wkNwwSxUmSDEmAvQHKxp2IOrfA8zWWnnOWP/exec',
         {
           method: 'POST',
           body: formData,
