@@ -136,7 +136,7 @@ if (rsvpForm) {
         {
           method: 'POST',
           body: formData,
-          mode: 'no-cors'
+          //mode: 'no-cors'
         }
       );
 
