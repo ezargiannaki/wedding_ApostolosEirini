@@ -157,26 +157,45 @@ if (rsvpForm) {
 // RSVP - μήνυμα επιτυχίας
 // ===========================
 
+// ===========================
+// RSVP - επιβεβαίωση υποβολής
+// ===========================
+
 const rsvpForm = document.querySelector('#rsvp form');
+const hiddenIframe = document.getElementById('hidden_iframe');
 const rsvpMessage = document.getElementById('rsvpMessage');
 
-if (rsvpForm) {
-  rsvpForm.addEventListener('submit', function () {
+let rsvpSubmitted = false;
 
-    const submitButton = rsvpForm.querySelector('button[type="submit"]');
+if (rsvpForm && hiddenIframe && rsvpMessage) {
+
+  rsvpForm.addEventListener('submit', function () {
+    rsvpSubmitted = true;
+
+    const submitButton =
+      rsvpForm.querySelector('button[type="submit"]');
 
     submitButton.disabled = true;
-    submitButton.textContent = 'Αποστολή...!';
+    submitButton.textContent = 'Αποστολή...';
 
-    setTimeout(() => {
-      rsvpForm.reset();
+    rsvpMessage.textContent = '';
+  });
 
-      rsvpMessage.textContent =
-        'Η απάντησή σας καταχωρήθηκε. Ευχαριστούμε! 🤍';
+  hiddenIframe.addEventListener('load', function () {
 
-      submitButton.disabled = false;
-      submitButton.textContent = 'Αποστολή';
+    if (!rsvpSubmitted) return;
 
-    }, 1200);
+    rsvpForm.reset();
+
+    rsvpMessage.textContent =
+      'Η απάντησή σας καταχωρήθηκε. Ευχαριστούμε! 🤍';
+
+    const submitButton =
+      rsvpForm.querySelector('button[type="submit"]');
+
+    submitButton.disabled = false;
+    submitButton.textContent = 'Αποστολή';
+
+    rsvpSubmitted = false;
   });
 }
