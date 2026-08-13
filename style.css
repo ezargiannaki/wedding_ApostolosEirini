@@ -561,3 +561,12 @@ footer{
     transition:none;
   }
 }
+
+/*για απαντησεις στο rsvp*/
+#rsvpMessage{
+  margin-top:18px;
+  color:var(--muted);
+  font-style:italic;
+  font-size:15px;
+  min-height:24px;
+}
